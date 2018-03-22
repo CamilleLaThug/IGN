@@ -1,6 +1,6 @@
 
 <?php
-  require_once 'Classes\PHPExcel\IOFactory.php';
+  require_once '../Classes/PHPExcel/IOFactory.php';
  ?>
 
 <!DOCTYPE html>
@@ -25,7 +25,7 @@
       if (isset($_FILES['xslFille']) && !empty($_FILES['xslFille']['tmp_name'])) {
         $xslObject = PHPExcel_IOFactory::load($_FILES['xslFille']['tmp_name']);
         $getSheet = $xslObject->getActiveSheet()->toArray();
-       //var_dump($getSheet);
+       var_dump($getSheet);
         ?>
         <div class="container">
 

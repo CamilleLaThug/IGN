@@ -22,7 +22,7 @@ class ControleurGrilleSynthese extends ControleurGenerique {
 
 		else {			
 			
-			$_SESSION['id_user'] = $this->modele->modele_authentification($_POST['pseudo'], $_POST['mdp']);
+			// $_SESSION['id_user'] = $this->modele->modele_authentification($_POST['pseudo'], $_POST['mdp']);
 
 			if (!isset($_SESSION['id_user'])) {
 				$this->vue->vue_erreur("Impossible de se connecter. Veuillez réessayer !");
@@ -36,14 +36,7 @@ class ControleurGrilleSynthese extends ControleurGenerique {
 		}
 	}
 
-	function message_connexion_echoue(){
-		$this->vue->vue_erreur("La combinaison Pseudo, Mot de Passe que vous avez saisi est incorrect");
-	}
 
-	function deconnexion() {
-		unset($_SESSION['id_user']);
-		$this->vue->vue_confirm("Vous etes déconnecté !");
-	}
 
 	function getModel(){
 		return $this->model;

@@ -16,7 +16,7 @@ class ModGrilleSynthese extends ModuleGenerique {
 		$this -> controleur = new ControleurGrilleSynthese();
 
 		switch ($action) {
-			case 'form_grilleSynthese':
+			case 'info_entreprise':
 				$this->controleur->form_grilleSynthese();
 				break;
 

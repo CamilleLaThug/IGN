@@ -11,9 +11,7 @@ class ModeleGrilleSynthese extends ModeleGenerique {
 			$prepare = self::$connexion->prepare($req);
 			$prepare->execute (array($pseudo));
 			$result = $prepare->fetch();
-			var_dump($mdp);
-			var_dump($result['mdp_user']);
-			var_dump(password_verify($mdp, $result['mdp_user']));
+			
 			if( password_verify($mdp, $result['mdp_user'])) {
 
 				return $result['id_user'];
@@ -21,14 +19,7 @@ class ModeleGrilleSynthese extends ModeleGenerique {
 			} else {
 				return NULL;
 			}
-			/*
 
-			if ( $mdp == $result['mdp_user']) {
-				return $result['id_user'];
-
-			} else {
-				return NULL;
-			}*/
 		
 	}
 }
