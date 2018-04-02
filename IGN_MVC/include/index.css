@@ -1,0 +1,41 @@
+
+/*footer de */
+footer{
+  bottom: 0;
+  height: 200px;
+  width: 100%;
+  background-color: rgb(113, 118, 122);
+}
+
+
+.p1footer{
+  color: white;
+}
+.plus{
+
+}
+
+.p2footer{
+  color: white;
+}
+
+.p3footer{
+  margin-top: 10px;
+  color: white;
+}
+
+.content{
+  position: relative;
+  top: 35px;
+  height: 150px;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.img{
+  float: right;
+  width: 300px;
+  height: 150px;
+  position: relative;
+  top: -160px;
+}
